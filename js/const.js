@@ -1,4 +1,3 @@
-
 const data = [
     {
       id: 2,
@@ -92,5 +91,47 @@ const data = [
       }
     
   ];
-  
-export default data;
+
+const categories = [
+  {
+    name: "Nosotros",
+    href: "#",
+    icon: "bx bx-info-circle", 
+    id: "",
+  },
+  {
+    name: "Home",
+    href: "../index.html",
+    icon: "bx bx-home", 
+    id: "",
+  },
+  {
+    name: "Productos",
+    href: "#",
+    icon: "bx bx-cart",
+    id: "",
+  },
+  {
+    name: "Login",
+    href: "../html/login.html",
+    icon: "bx bx-log-in", 
+    id: "",
+  },
+  {
+    name: `${localStorage.getItem("email")}`,
+    href: "#",
+    icon: "bx bxs-user",
+    id: "",
+  },
+  {
+    name: `${localStorage.getItem("quantity")}`,
+    href: "../html/carrito.html",
+    icon: "bx bx-cart",
+    id: "cart",
+  },
+];
+
+const LOGIN_USER = {
+  email: "kebako01@gmail.com",
+  password: "kebako01",
+}

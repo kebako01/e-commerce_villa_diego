@@ -6,56 +6,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./css/style.css" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
     rel="stylesheet" />
-  <link rel="shortcut icon" href="./images/icon.png">
-  <title>E-commerce diego villa</title>
+  <link rel="shortcut icon" href="LogoD.png">
+  <title>E-commerce | Home</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .filterBar {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .categories button, .search button {
+      transition: background-color 0.3s;
+    }
+    .categories button:hover, .search button:hover {
+      background-color: #007bff;
+      color: white;
+    }
+    .contenedor {
+      padding: 20px;
+    }
+    .header-image {
+      width: 100%; 
+      max-height: 300px; 
+      object-fit: cover;
+      display: block;
+      margin: 0 auto; 
+    }
+    .navbar-brand img {
+      height: 40px; 
+    }
+  </style>
 </head>
 
-<body>
-
-  <nav class="navbar navbar-expand-lg">
+<body id="index">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav me-auto" id="menuLeft"></ul>
-        <ul class="navbar-nav ms-auto me-auto" id="menuCenter"></ul>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+        <ul class="navbar-nav" id="menuLeft"></ul>
         <ul class="navbar-nav ms-auto" id="menuRight"></ul>
+        <a href="../index.html" class="navbar-brand ms-3">
+          <img src="LogoD.png" alt="Logo"> 
+        </a>
       </div>
     </div>
   </nav>
-<div class="banner">
-        <img src="https://i.pinimg.com/control/564x/41/c3/09/41c30976090906f1ad3d666ffa5b2292.jpg" alt="Banner" />
-    </div>
-  <h1></h1>
+
+  <!-- Header Image  -->
+  <img src="https://i.pinimg.com/736x/d4/ed/e8/d4ede8df6c9d78e46619dfb455658d9b.jpg" alt="Header Image" class="header-image">
+
+  <h1 class="text-center my-4">Welcome to My E-commerce Site</h1>
   <div class="filterBar">
     <div class="categories">
-      <button  id="all">Todas</button>
+      <button id="all">Ver Todo</button>
       <button class="categoryButton" value="Ilustraciones">Ilustraciones</button>
       <button class="categoryButton" value="Landscape">Landscape</button>
     </div>
     <div class="search">
-      <input placeholder="Buscar"/>
-      <button id="filter"><i class='bx bx-search-alt-2'></i></button>
-      <button id="reset"><i class='bx bx-x-circle'></i></button>
+      <input type="text" placeholder="Buscar" aria-label="Search" />
+      <button id="filter" aria-label="Filter"><i class='bx bx-search-alt-2'></i></button>
+      <button id="reset" aria-label="Reset"><i class='bx bx-x-circle'></i></button>
     </div>
   </div>
 
-  <section class="contenedor"></section>
+  <section class="contenedor"><span class="loader"></span></section>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <script type="module" src="./index.js"></script>
-  <script src="./navbar.js"></script>
+    crossorigin="anonymous" defer></script>
+  <script src="./js/const.js" defer></script>
+  <script src="./js/index.js" defer></script>
+  <script src="./js/navbar.js" defer></script>
 </body>
 
 </html>
